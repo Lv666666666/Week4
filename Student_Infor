@@ -1,0 +1,67 @@
+package Student_Infor;
+
+public class Student_Infor {
+	private String name;
+	private String phoneNum;
+	private int studentNum;
+
+	public Student_Infor(){ //构造方法
+		this.name = "lvhao";
+		this.phoneNum = "131000";
+		this.studentNum = 0002;
+		
+	}
+	public Student_Infor(String name,String phoneNum,int studentNum){ //构造方法
+			this.name = name;
+			this.phoneNum = phoneNum;
+			this.studentNum = studentNum;
+		}
+	
+	public String getName(){
+		return name;
+	}
+	public void setName(String name){
+		this.name = name;
+	}
+	
+	public String getPhoneNum(){
+		return this.phoneNum;
+	}
+	public void setPhoneNum(String phoneNum){
+		this.phoneNum = phoneNum;
+	}
+	
+	public int getStudentNum(){
+		return this.studentNum;
+	}
+	public void setStudentNum(int studentNum){
+		this.studentNum = studentNum;
+	}
+	
+	
+//	public void updateSalary(){
+//		this.baseSalary = (float) (this.baseSalary * 1.5);
+//	}
+
+	public void displayStudent(){
+		String info = "";
+		info = "name = " + this.name + ", phoneNum = " + this.phoneNum + ", studentNum = "
+				+this.studentNum;
+		System.out.println(info);
+	}
+	
+}
+
+================================================================================================================================
+package Student_Infor;
+
+public class Student_Infor_Driver {
+	public static void main(String agrs[]){
+
+		Student_Infor stu1 = new Student_Infor("xiaobang","131001",0001);
+		stu1.displayStudent();
+		
+		Student_Infor stu2 = new Student_Infor();
+		stu2.displayStudent();
+	}
+}
