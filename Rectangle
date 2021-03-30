@@ -1,0 +1,72 @@
+package Rectangle;
+
+public class Rectangle {
+	
+	private float length;
+	private float width;
+	
+	public Rectangle(){
+		this.length = 1.0f;
+		this.width = 1.0f;
+	}
+	
+	public Rectangle(float length,float width){
+		this.length = length;
+		this.width = width;
+	}
+	
+	public float getLength(){
+		return this.length;
+	}
+	public void setLength(float length){
+		this.length = length;
+	}
+	
+	public float getWidth(){
+		return width;
+	}
+	public void setWidth(float width){
+		this.width = width;
+	}
+	
+	public float area(){
+		float area = 0;
+		area = length * width;
+		return area;
+	}
+	
+	public float peri(){
+		float peri = 0;
+		peri = 2*(length + width);
+		return peri;
+	}
+	
+	public void print(){
+		String info = "";
+		info = "length = "+this.length+", width ="+this.width;
+		System.out.println(info);
+	}
+}
+
+============================================================================================================================
+package Rectangle;
+
+public class RectangleDriver {
+	public static void main(String args[]){
+		Rectangle rec1 = new Rectangle(); //默认值为1.0，1.0
+		Rectangle rec2 = new Rectangle(3.1f,2.1f);
+		
+		System.out.print("rec1:");rec1.print();
+		System.out.println("rec1的面积为："+rec1.area());
+		System.out.println("rec1的周长为："+rec1.peri());
+		
+		rec1.setLength(2.1f);rec1.setWidth(1.2f);rec1.print();
+		System.out.println("rec1的面积为："+rec1.area());
+		System.out.println("rec1的周长为："+rec1.peri());
+		
+		System.out.print("rec2:");rec2.print();
+		System.out.println("rec2的面积为："+rec2.area());
+		System.out.println("rec2的周长为："+rec2.peri());
+		
+	}
+}
